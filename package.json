@@ -1,0 +1,21 @@
+{
+  "name": "kata-12-days-christmas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./build/src/index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Vittorio Migliore",
+  "license": "",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "typescript": "^5.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "-"
+  }
+}
