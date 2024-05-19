@@ -1,6 +1,16 @@
 export default class TwelveDaysXmasSong {
-    verseHeader(verse:number):string{
-        return `On the first day of Christmas
+  private readonly cardinals: {
+    [key: number]: string;
+  } = {
+    1: "first",
+    2: "second",
+  };
+  verseHeader(verse: number): string {
+    return (
+      `On the ` +
+      this.cardinals[verse] +
+      ` day of Christmas
         My true love sent to me:`
-    }
+    );
+  }
 }
