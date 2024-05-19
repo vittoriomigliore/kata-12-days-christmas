@@ -23,4 +23,7 @@ export default class TwelveDaysXmasSong {
         My true love sent to me:`
     );
   }
+  verseBody(verse: number): string {
+    return `A partridge in a pear tree.`;
+  }
 }
