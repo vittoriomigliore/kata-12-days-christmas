@@ -1,6 +1,8 @@
+import TwelveDaysXmasSong from "../src/twelveDaysXmasSong";
+const twelveDaysXmasSong = new TwelveDaysXmasSong();
 describe('twelve days christmas song test set', function (): void {
     it('first two lines verse 1', ():void => {
-        var result: string = TwelveDaysXmasSong.verseHeader(1);
+        var result: string = twelveDaysXmasSong.verseHeader(1);
         var expected : string = `On the first day of Christmas
         My true love sent to me:`;
         expect(result).toBe(expected);
