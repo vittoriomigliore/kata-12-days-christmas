@@ -44,4 +44,14 @@ describe('twelve days christmas song body test set', function():void {
         var expected : string = 'Ten lords a-leaping\nNine ladies dancing\nEight maids a-milking\nSeven swans a-swimming\nSix geese a-laying\nFive golden rings\nFour calling birds\nThree french hens\nTwo turtle doves and\nA partridge in a pear tree.';
         expect(result).toBe(expected);
     })
+    it('body verse 0',():void => {
+        var result: string = twelveDaysXmasSong.verseBody(0);
+        var expected : string = '';
+        expect(result).toBe(expected);
+    })
+    it('body verse 13',():void => {
+        var result: string = twelveDaysXmasSong.verseBody(13);
+        var expected : string = '';
+        expect(result).toBe(expected);
+    })
 })
