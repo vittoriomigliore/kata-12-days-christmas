@@ -13,4 +13,10 @@ describe('twelve days christmas song test set', function (): void {
         My true love sent to me:`;
         expect(result).toBe(expected);
     })
+    it('first two lines verse 4', ():void => {
+        var result: string = twelveDaysXmasSong.verseHeader(4);
+        var expected : string = `On the fourth day of Christmas
+        My true love sent to me:`;
+        expect(result).toBe(expected);
+    })
 })
