@@ -24,6 +24,15 @@ export default class TwelveDaysXmasSong {
     );
   }
   verseBody(verse: number): string {
-    return `A partridge in a pear tree.`;
+    var result = "";
+    for(var i = verse; i>0; i--){
+        if(i == 2){
+            result += 'Two turtle doves and'+'\n'
+        }
+        if(i == 1){
+            result += 'A partridge in a pear tree.'
+        }
+    }
+    return result
   }
 }
