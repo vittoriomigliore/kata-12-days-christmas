@@ -24,7 +24,12 @@ describe('twelve days christmas song header test set', function (): void {
 describe('twelve days christmas song body test set', function():void {
     it('body verse 1',():void => {
         var result: string = twelveDaysXmasSong.verseBody(1);
-        var expected : string = `A partridge in a pear tree.`;
+        var expected : string = 'A partridge in a pear tree.';
+        expect(result).toBe(expected);
+    })
+    it('body verse 2',():void => {
+        var result: string = twelveDaysXmasSong.verseBody(2);
+        var expected : string = 'Two turtle doves and\nA partridge in a pear tree.';
         expect(result).toBe(expected);
     })
 })
