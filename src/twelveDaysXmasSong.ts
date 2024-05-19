@@ -32,6 +32,9 @@ export default class TwelveDaysXmasSong {
     12: "Twelve drummers drumming",
   };
   verseHeader(verse: number): string {
+    if(verse < 1 || verse > 12){
+      return ''
+    }
     return (
       `On the ` +
       this.cardinals[verse] +
