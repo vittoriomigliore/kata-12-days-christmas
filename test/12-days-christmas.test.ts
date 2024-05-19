@@ -1,6 +1,6 @@
 import TwelveDaysXmasSong from "../src/twelveDaysXmasSong";
 const twelveDaysXmasSong = new TwelveDaysXmasSong();
-describe('twelve days christmas song test set', function (): void {
+describe('twelve days christmas song header test set', function (): void {
     it('first two lines verse 1', ():void => {
         var result: string = twelveDaysXmasSong.verseHeader(1);
         var expected : string = `On the first day of Christmas
@@ -17,6 +17,14 @@ describe('twelve days christmas song test set', function (): void {
         var result: string = twelveDaysXmasSong.verseHeader(4);
         var expected : string = `On the fourth day of Christmas
         My true love sent to me:`;
+        expect(result).toBe(expected);
+    })
+})
+
+describe('twelve days christmas song body test set', function():void {
+    it('body verse 1',():void => {
+        var result: string = twelveDaysXmasSong.verseBody(1);
+        var expected : string = `A partridge in a pear tree.`;
         expect(result).toBe(expected);
     })
 })
