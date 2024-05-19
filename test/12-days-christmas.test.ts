@@ -19,6 +19,16 @@ describe('twelve days christmas song header test set', function (): void {
         My true love sent to me:`;
         expect(result).toBe(expected);
     })
+    it('first two lines verse 0', ():void => {
+        var result: string = twelveDaysXmasSong.verseHeader(0);
+        var expected : string = '';
+        expect(result).toBe(expected);
+    })
+    it('first two lines verse 13', ():void => {
+        var result: string = twelveDaysXmasSong.verseHeader(13);
+        var expected : string = '';
+        expect(result).toBe(expected);
+    })
 })
 
 describe('twelve days christmas song body test set', function():void {
