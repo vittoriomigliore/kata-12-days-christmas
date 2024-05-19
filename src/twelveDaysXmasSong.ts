@@ -20,10 +20,9 @@ export default class TwelveDaysXmasSong {
       return "";
     }
     return (
-      `On the ` +
+      'On the ' +
       this.days[verse].cardinal +
-      ` day of Christmas
-        My true love sent to me:`
+      ' day of Christmas\nMy true love sent to me:'
     );
   }
   verseBody(verse: number): string {
