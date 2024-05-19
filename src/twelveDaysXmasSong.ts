@@ -26,6 +26,9 @@ export default class TwelveDaysXmasSong {
     );
   }
   verseBody(verse: number): string {
+    if (verse < 1 || verse > 12) {
+      return "";
+    }
     var result = "";
     for (var i = verse; i > 0; i--) {
       if (i == 1) {
