@@ -1,43 +1,27 @@
 export default class TwelveDaysXmasSong {
-  private readonly cardinals: {
-    [key: number]: string;
+  private readonly days: {
+    [key: number]: SongDay;
   } = {
-    1: "first",
-    2: "second",
-    3: "third",
-    4: "fourth",
-    5: "fifth",
-    6: "sixth",
-    7: "seventh",
-    8: "eight",
-    9: "ninth",
-    10: "tenth",
-    11: "eleventh",
-    12: "twelfth",
-  };
-  private readonly presents: {
-    [key: number]: string;
-  } = {
-    1: "A partridge in a pear tree.",
-    2: "Two turtle doves and",
-    3: "Three french hens",
-    4: "Four calling birds",
-    5: "Five golden rings",
-    6: "Six geese a-laying",
-    7: "Seven swans a-swimming",
-    8: "Eight maids a-milking",
-    9: "Nine ladies dancing",
-    10: "Ten lords a-leaping",
-    11: "Eleven pipers piping",
-    12: "Twelve drummers drumming",
+    1: { cardinal: "first", body: "A partridge in a pear tree." },
+    2: { cardinal: "second", body: "Two turtle doves and" },
+    3: { cardinal: "third", body: "Three french hens" },
+    4: { cardinal: "fourth", body: "Four calling birds" },
+    5: { cardinal: "fifth", body: "Five golden rings" },
+    6: { cardinal: "sixth", body: "Six geese a-laying" },
+    7: { cardinal: "seventh", body: "Seven swans a-swimming" },
+    8: { cardinal: "eight", body: "Eight maids a-milking" },
+    9: { cardinal: "ninth", body: "Nine ladies dancing" },
+    10: { cardinal: "tenth", body: "Ten lords a-leaping" },
+    11: { cardinal: "eleventh", body: "Eleven pipers piping" },
+    12: { cardinal: "twelfth", body: "Twelve drummers drumming" },
   };
   verseHeader(verse: number): string {
-    if(verse < 1 || verse > 12){
-      return ''
+    if (verse < 1 || verse > 12) {
+      return "";
     }
     return (
       `On the ` +
-      this.cardinals[verse] +
+      this.days[verse].cardinal +
       ` day of Christmas
         My true love sent to me:`
     );
@@ -46,11 +30,16 @@ export default class TwelveDaysXmasSong {
     var result = "";
     for (var i = verse; i > 0; i--) {
       if (i == 1) {
-        result += this.presents[i];
+        result += this.days[i].body;
       } else {
-        result += this.presents[i] + "\n";
+        result += this.days[i].body + "\n";
       }
     }
     return result;
   }
 }
+
+type SongDay = {
+  cardinal: string;
+  body: string;
+};
