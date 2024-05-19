@@ -8,7 +8,7 @@ describe('twelve days christmas song test set', function (): void {
         expect(result).toBe(expected);
     })
     it('first two lines verse 2', ():void => {
-        var result: string = twelveDaysXmasSong.verseHeader(1);
+        var result: string = twelveDaysXmasSong.verseHeader(2);
         var expected : string = `On the second day of Christmas
         My true love sent to me:`;
         expect(result).toBe(expected);
