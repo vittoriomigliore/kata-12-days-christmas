@@ -33,7 +33,7 @@ describe('twelve days christmas song body test set', function():void {
         expect(result).toBe(expected);
     })
     it('body verse 10',():void => {
-        var result: string = twelveDaysXmasSong.verseBody(2);
+        var result: string = twelveDaysXmasSong.verseBody(10);
         var expected : string = 'Ten lords a-leaping\nNine ladies dancing\nEight maids a-milking\nSeven swans a-swimming\nSix geese a-laying\nFive golden rings\nFour calling birds\nThree french hens\nTwo turtle doves and\nA partridge in a pear tree.';
         expect(result).toBe(expected);
     })
